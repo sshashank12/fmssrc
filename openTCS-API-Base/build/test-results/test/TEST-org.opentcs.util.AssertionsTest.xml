@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.util.AssertionsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-01-31T07:07:04" hostname="DGR-ZISHAN" time="0.001">
+<testsuite name="org.opentcs.util.AssertionsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-02-19T22:14:03" hostname="virtualserver01" time="0.003">
   <properties/>
-  <testcase name="checkInRangeShouldFailOnMoreThanMaximum" classname="org.opentcs.util.AssertionsTest" time="0.0"/>
+  <testcase name="checkInRangeShouldFailOnMoreThanMaximum" classname="org.opentcs.util.AssertionsTest" time="0.001"/>
   <testcase name="checkInRangeShouldFailOnLessThanMinimum" classname="org.opentcs.util.AssertionsTest" time="0.0"/>
   <testcase name="checkInRangeShouldIncludeBoundaries" classname="org.opentcs.util.AssertionsTest" time="0.0"/>
   <testcase name="checkArgumentShouldFormatIntegerMessageTemplateArgument" classname="org.opentcs.util.AssertionsTest" time="0.001"/>

@@ -1,57 +1,1042 @@
-[20190210-17:12:48-717] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-01-23 18:22:31), customization '-' version - (build date: -), Java: 1.8.0_181, Oracle Corporation; JVM: 25.181-b13, Oracle Corporation; OS: Windows 10, amd64
-[20190210-17:12:48-862] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190210-17:12:48-937] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
-[20190210-17:12:48-941] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
-[20190210-17:12:50-040] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190210-17:12:51-756] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
-[20190210-17:12:51-992] INFO    main                 o.o.k.e.rmi.XMLFileUserAccountPersister.loadUserAccounts(): Account data file does not exist, no user accounts available.
-[20190210-17:12:52-220] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
-[20190210-17:12:52-311] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @3818ms to org.eclipse.jetty.util.log.Slf4jLog
-[20190210-17:12:52-463] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190210-17:12:52-463] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
-[20190210-17:12:52-468] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
-[20190210-17:12:52-469] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
-[20190210-17:12:52-474] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190210-17:12:52-476] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
-[20190210-17:12:52-482] INFO    Thread-2             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190210-17:12:52-483] INFO    Thread-2             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
-[20190210-17:12:52-484] INFO    Thread-2             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190210-17:12:52-491] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to F:\fmssrc\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190210-171252.txt...
-[20190210-17:12:52-538] INFO    Thread-2             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190210-17:12:52-538] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190210-17:12:52-539] INFO    Thread-2             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190210-17:12:52-539] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190210-17:12:52-546] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
-[20190210-17:12:52-546] INFO    Thread-2             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
-[20190210-17:12:52-588] INFO    Thread-2             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@26e6eeea{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
-[20190210-17:12:52-588] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@c2dd5d4{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
-[20190210-17:12:52-589] INFO    Thread-2             o.e.j.server.Server.doStart()                          : Started @4095ms
-[20190210-17:12:52-589] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @4095ms
-[20190210-17:14:10-241] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-01-23 18:22:31), customization '-' version - (build date: -), Java: 1.8.0_181, Oracle Corporation; JVM: 25.181-b13, Oracle Corporation; OS: Windows 10, amd64
-[20190210-17:14:10-392] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190210-17:14:10-470] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
-[20190210-17:14:10-472] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
-[20190210-17:14:11-250] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190210-17:14:12-917] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
-[20190210-17:14:13-397] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
-[20190210-17:14:13-447] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @3419ms to org.eclipse.jetty.util.log.Slf4jLog
-[20190210-17:14:13-586] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190210-17:14:13-587] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
-[20190210-17:14:13-598] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190210-17:14:13-663] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
-[20190210-17:14:13-663] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
-[20190210-17:14:13-670] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
-[20190210-17:14:13-673] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190210-17:14:13-674] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190210-17:14:13-677] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190210-17:14:13-678] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
-[20190210-17:14:13-679] INFO    Thread-10            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190210-17:14:13-681] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190210-17:14:13-681] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190210-17:14:13-683] INFO    Thread-10            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
-[20190210-17:14:13-684] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
-[20190210-17:14:13-687] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to F:\fmssrc\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190210-171413.txt...
-[20190210-17:14:13-724] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@11675dcc{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
-[20190210-17:14:13-724] INFO    Thread-10            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@16c47c61{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
-[20190210-17:14:13-724] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @3697ms
-[20190210-17:14:13-725] INFO    Thread-10            o.e.j.server.Server.doStart()                          : Started @3698ms
+[20190224-07:39:17-785] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-24 07:37:41), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190224-07:39:18-096] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190224-07:39:18-218] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+[20190224-07:39:18-222] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
+[20190224-07:39:19-429] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190224-07:39:22-025] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
+[20190224-07:39:22-174] INFO    main                 o.o.k.e.rmi.XMLFileUserAccountPersister.loadUserAccounts(): Account data file does not exist, no user accounts available.
+[20190224-07:39:22-526] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190224-07:39:22-648] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @5293ms to org.eclipse.jetty.util.log.Slf4jLog
+[20190224-07:39:22-848] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:39:22-849] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
+[20190224-07:39:22-864] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:39:22-972] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:39:22-973] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:39:22-993] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190224-07:39:23-082] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@4034b1b2{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
+[20190224-07:39:23-083] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @5728ms
+[20190224-07:39:23-796] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
+[20190224-07:39:23-797] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190224-07:39:23-811] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190224-07:39:23-819] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:39:23-820] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190224-07:39:23-821] INFO    Thread-10            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:39:23-822] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:39:23-823] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:39:23-824] INFO    Thread-10            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190224-07:39:23-829] INFO    Thread-10            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@35e66b1b{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:39:23-829] INFO    Thread-10            o.e.j.server.Server.doStart()                          : Started @6475ms
+[20190224-07:39:23-842] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190224-073923.txt...
+[20190224-07:40:47-736] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Terminating connection listener...
+[20190224-07:40:47-737] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : >>> Spark shutting down ...
+[20190224-07:40:47-742] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Received termination signal.
+[20190224-07:40:47-745] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Terminated connection listener.
+[20190224-07:40:47-753] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Connection listener thread has terminated.
+[20190224-07:40:47-802] INFO    Thread-19            o.e.j.server.AbstractConnector.doStop()                : Stopped ServerConnector@35e66b1b{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:40:47-803] INFO    Thread-19            o.e.j.s.session.HouseKeeper.stopScavenging()           : Stopped scavenging
+[20190224-07:40:47-812] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : done
+[20190224-07:40:48-282] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190224-07:40:48-717] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190224-07:40:49-417] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:40:49-451] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:40:49-504] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:40:49-509] WARNING kernelExecutor       o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190224-07:40:49-512] INFO    kernelExecutor       o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190224-074049.txt...
+[20190224-07:40:49-515] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:40:49-518] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190224-07:40:49-522] INFO    Thread-25            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:40:49-525] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:40:49-525] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:40:49-526] INFO    Thread-25            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190224-07:40:49-531] INFO    Thread-25            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@24b00df7{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:40:49-531] INFO    Thread-25            o.e.j.server.Server.doStart()                          : Started @92177ms
+[20190224-07:41:07-531] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:08-533] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:09-535] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:10-538] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:11-540] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:12-544] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:13-546] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:14-549] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:15-549] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:16-551] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:17-553] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:18-557] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:19-561] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:20-563] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:21-565] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:22-569] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:23-572] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:24-574] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:25-576] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:26-579] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:27-590] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:28-593] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:29-596] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:30-598] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:31-601] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:32-603] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:33-607] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:34-609] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:35-611] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:36-614] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:37-616] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:38-619] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:39-621] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:40-623] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:41-625] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:42-628] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:43-631] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:44-636] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:45-639] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:46-642] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:47-646] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:48-648] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:49-650] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:50-652] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:51-653] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:52-657] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:53-663] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:54-665] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:55-667] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:56-672] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:57-683] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:58-686] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:41:59-798] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:00-874] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:01-876] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:02-878] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:03-879] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:04-881] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:05-882] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:06-885] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:07-886] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:08-891] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:09-892] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:10-895] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:11-897] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:12-899] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:13-902] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:14-904] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:15-906] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:16-909] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:17-911] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:18-914] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:19-916] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:20-920] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:21-922] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:22-925] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:23-927] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:24-929] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:25-931] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:26-934] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:27-936] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:28-939] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:29-942] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:30-946] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:31-948] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:32-951] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:33-953] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:34-956] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:35-959] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:36-963] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:37-966] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:38-970] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:39-972] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:40-977] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:41-981] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:42-984] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:43-988] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:44-991] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:45-993] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:46-997] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:48-001] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:49-003] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:50-005] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:51-007] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:52-010] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:53-012] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:54-014] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:55-018] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:56-021] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:57-024] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:58-027] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:42:59-030] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:43:00-032] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:43:01-035] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:44:47-243] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-24 07:37:41), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190224-07:44:47-543] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190224-07:44:47-636] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+[20190224-07:44:47-639] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
+[20190224-07:44:48-762] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190224-07:44:51-173] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
+[20190224-07:44:51-764] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190224-07:44:51-833] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @5004ms to org.eclipse.jetty.util.log.Slf4jLog
+[20190224-07:44:52-038] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:44:52-039] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
+[20190224-07:44:52-052] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:44:52-302] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:44:52-303] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:44:52-328] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190224-07:44:52-365] WARN    main                 o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190224-07:44:52-418] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@f17f00c{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
+[20190224-07:44:52-422] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @5593ms
+[20190224-07:44:52-429] INFO    main                 o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190224-07:44:52-808] INFO    main                 o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
+[20190224-07:44:53-715] INFO    main                 o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[20190224-07:44:54-371] WARN    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190224-07:44:54-397] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
+[20190224-07:44:54-401] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190224-07:44:54-402] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190224-07:44:54-416] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190224-07:44:54-793] INFO    main                 o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[20190224-07:44:54-833] WARN    main                 o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
+[20190224-07:44:58-284] INFO    main                 o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@762637be] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190224-07:44:58-367] INFO    main                 o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190224-07:45:00-142] WARN    main                 o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190224-07:45:00-144] INFO    main                 o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190224-07:45:00-198] WARN    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190224-07:45:00-199] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
+[20190224-07:45:00-200] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190224-07:45:00-201] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190224-07:45:00-202] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190224-07:45:00-245] INFO    main                 o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[20190224-07:45:00-249] WARN    main                 o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
+[20190224-07:45:00-444] INFO    main                 o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@664212ab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190224-07:45:00-495] INFO    main                 o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190224-07:45:00-606] WARN    main                 o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190224-07:45:00-607] INFO    main                 o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190224-07:45:00-619] WARN    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190224-07:45:00-620] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
+[20190224-07:45:00-621] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190224-07:45:00-621] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190224-07:45:00-622] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190224-07:45:00-657] INFO    main                 o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[20190224-07:45:00-659] WARN    main                 o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
+[20190224-07:45:00-822] INFO    main                 o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d54d0f5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190224-07:45:00-852] INFO    main                 o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190224-07:45:01-049] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named ''.
+[20190224-07:45:01-050] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190224-07:45:01-689] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190224-07:45:01-713] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190224-07:45:01-735] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190224-07:45:01-741] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190224-07:45:01-758] INFO    Thread-18            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:45:01-759] INFO    Thread-18            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190224-07:45:01-773] INFO    Thread-18            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:45:01-775] INFO    Thread-18            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:45:01-775] INFO    Thread-18            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:45:01-776] INFO    Thread-18            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190224-07:45:01-783] INFO    Thread-18            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@542c4646{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:45:01-785] INFO    Thread-18            o.e.j.server.Server.doStart()                          : Started @14957ms
+[20190224-07:45:01-788] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190224-074501.txt...
+[20190224-07:48:45-686] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Terminating connection listener...
+[20190224-07:48:45-687] INFO    Thread-27            s.e.jetty.EmbeddedJettyServer.extinguish()             : >>> Spark shutting down ...
+[20190224-07:48:45-691] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Received termination signal.
+[20190224-07:48:45-692] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Terminated connection listener.
+[20190224-07:48:45-692] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Connection listener thread has terminated.
+[20190224-07:48:45-756] INFO    Thread-27            o.e.j.server.AbstractConnector.doStop()                : Stopped ServerConnector@542c4646{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:48:45-759] INFO    Thread-27            o.e.j.s.session.HouseKeeper.stopScavenging()           : Stopped scavenging
+[20190224-07:48:45-766] INFO    Thread-27            s.e.jetty.EmbeddedJettyServer.extinguish()             : done
+[20190224-07:48:46-229] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190224-07:48:46-600] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190224-07:48:46-636] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:48:46-654] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:48:46-672] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:48:46-689] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190224-07:48:46-804] WARNING kernelExecutor       o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190224-07:48:46-807] INFO    kernelExecutor       o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190224-074846.txt...
+[20190224-07:48:46-807] INFO    Thread-32            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190224-07:48:46-807] INFO    Thread-32            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190224-07:48:46-807] INFO    Thread-32            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190224-07:48:46-834] INFO    Thread-32            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190224-07:48:46-843] INFO    Thread-32            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190224-07:48:46-845] INFO    Thread-32            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
+[20190224-07:48:46-848] INFO    Thread-32            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@3738af73{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190224-07:48:46-849] INFO    Thread-32            o.e.j.server.Server.doStart()                          : Started @240022ms
+[20190224-07:49:36-834] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:37-837] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:38-839] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:39-842] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:40-845] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:41-846] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:42-848] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:43-851] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:44-855] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:45-857] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:46-859] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:47-863] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:48-865] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:49-867] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:50-869] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:51-872] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:52-874] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:53-877] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:54-879] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:55-881] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:56-885] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:57-886] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:58-888] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:49:59-891] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:00-892] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:01-894] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:02-897] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:03-898] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:04-901] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:05-904] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:06-904] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:07-907] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:08-909] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:09-913] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:10-915] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:11-917] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:12-920] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:13-922] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:14-925] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:15-927] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:16-928] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:17-931] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:18-935] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:19-937] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:20-939] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:21-942] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:22-944] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:23-946] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:24-947] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:25-948] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:26-951] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:27-953] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:28-954] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:29-957] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:30-959] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:31-961] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:32-963] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:33-965] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:34-967] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:35-968] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:36-970] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:37-970] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:38-973] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:39-974] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:40-975] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:41-978] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:42-980] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:43-982] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:44-984] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:45-986] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:46-988] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:47-990] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:48-991] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:49-993] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:50-994] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:51-996] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:52-997] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:54-000] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:55-002] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:56-004] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:57-008] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:58-010] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:50:59-012] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:00-015] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:01-018] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:02-020] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:03-021] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:04-022] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:05-024] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:06-025] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:07-027] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:08-029] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:09-030] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:10-031] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:11-034] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:12-037] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:13-040] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:14-043] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:15-045] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:16-047] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:17-049] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:18-050] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:19-053] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:20-056] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:21-058] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:22-060] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:23-063] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:24-065] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:25-068] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:26-069] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:27-072] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:28-075] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:29-077] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:30-078] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:31-081] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:32-083] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:33-086] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:34-089] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:35-092] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:36-093] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:37-095] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:38-097] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:39-098] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:40-101] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:41-103] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:42-105] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:43-107] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:44-108] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:45-110] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:46-112] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:47-115] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:48-117] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:49-119] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:50-122] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:51-123] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:52-125] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:53-129] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:54-131] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:55-134] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:56-137] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:57-139] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:58-141] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:51:59-142] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:00-145] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:01-147] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:02-150] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:03-152] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:04-154] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:05-157] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:06-160] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:07-163] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:08-166] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:09-168] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:10-172] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:11-174] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:12-177] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:13-180] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:14-181] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:15-185] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:16-187] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:17-189] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:18-192] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:19-192] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:20-194] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:21-198] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:22-199] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:23-202] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:24-204] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:25-207] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:26-210] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:27-213] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:28-215] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:29-218] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:30-220] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:31-222] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:32-225] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:33-226] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:34-229] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:35-231] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:36-234] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:37-239] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:38-241] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:39-243] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:40-246] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:41-249] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:42-252] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:43-254] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:44-257] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:45-260] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:46-262] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:47-263] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:48-266] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:49-268] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:50-270] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:51-273] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:52-275] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:53-278] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:54-281] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:55-284] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:56-287] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:57-290] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:58-294] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:52:59-297] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:00-298] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:01-301] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:02-303] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:03-306] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:04-308] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:05-309] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:06-312] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:07-315] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:08-318] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:09-320] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:10-321] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:11-322] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:12-326] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:13-327] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:14-330] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:15-333] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:16-335] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:17-337] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:18-340] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:19-344] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:20-347] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:21-350] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:22-356] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:23-359] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:24-363] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:25-365] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:26-368] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:27-371] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:28-375] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:29-377] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:30-381] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:31-383] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:32-385] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:33-388] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:34-390] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:35-393] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:36-396] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:37-400] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:38-404] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:39-408] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:40-409] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:41-411] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:42-415] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:43-417] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:44-437] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:45-440] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:46-443] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:47-446] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:48-449] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:49-453] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:50-455] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:51-459] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:52-462] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:53-465] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:54-469] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:55-471] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:56-474] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:57-477] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:58-480] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:53:59-483] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:00-489] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:01-492] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:02-495] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:03-497] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:04-499] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:05-503] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:06-506] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:07-511] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:08-512] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:09-515] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:10-518] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:11-523] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:12-526] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:13-528] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:14-530] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:15-532] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:16-534] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:17-537] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:18-541] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:19-543] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:20-545] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:21-549] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:22-552] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:23-554] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:24-558] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:25-560] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:26-563] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:27-567] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:28-570] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:29-574] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:30-577] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:31-580] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:32-583] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:33-586] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:34-590] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:35-593] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:36-596] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:37-597] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:38-602] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:39-603] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:40-606] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:41-610] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:42-613] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:43-618] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:44-622] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:45-626] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:46-629] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:47-632] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:48-635] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:49-639] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:50-641] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:51-645] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:52-648] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:53-651] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:54-654] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:55-657] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:56-660] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:57-663] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:58-667] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:54:59-671] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:00-674] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:01-679] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:02-682] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:03-685] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:04-688] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:05-690] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:06-694] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:07-698] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:08-702] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:09-706] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:10-710] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:11-714] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:12-718] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:13-721] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:14-724] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:15-727] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:16-729] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:17-733] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:18-736] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:19-741] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:20-743] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:21-746] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:22-749] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:23-753] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:24-757] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:25-759] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:26-763] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:27-766] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:28-770] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:29-774] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:30-778] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:31-783] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:32-786] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:33-790] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:34-794] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:35-797] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:36-800] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:37-804] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:38-807] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:39-811] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:40-813] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:41-816] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:42-819] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:43-822] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:44-827] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:45-831] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:46-834] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:47-838] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:48-841] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:49-845] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:50-848] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:51-852] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:52-855] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:53-857] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:54-861] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:55-866] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:56-868] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:57-872] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:58-877] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:55:59-881] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:00-886] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:01-890] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:02-899] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:03-915] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:04-928] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:05-932] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:06-936] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:07-939] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:08-942] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:09-945] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:10-947] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:11-951] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:12-953] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:13-957] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:14-962] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:15-964] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:16-967] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:17-970] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:18-974] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:19-977] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:20-980] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:21-983] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:22-987] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:23-990] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:24-995] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:25-999] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:27-001] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:28-005] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:29-008] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:30-011] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:31-013] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:32-017] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:33-021] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:34-024] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:35-028] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:36-030] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:37-034] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:38-037] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:39-041] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:40-046] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:41-051] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:42-054] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:43-057] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:44-060] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:45-065] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:46-069] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:47-074] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:48-077] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:49-082] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:50-085] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:51-088] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:52-092] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:53-095] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:54-100] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:55-103] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:56-107] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:57-111] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:58-114] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:56:59-118] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:00-121] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:01-124] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:02-127] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:03-131] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:04-134] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:05-139] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:06-143] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:07-147] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:08-150] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:09-154] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:10-158] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:11-161] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:12-165] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:13-169] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:14-173] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:15-177] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:16-181] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:17-184] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:18-187] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:19-191] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:20-195] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:21-200] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:22-203] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:23-207] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:24-211] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:25-215] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:26-220] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:27-222] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:28-226] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:29-230] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:30-234] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:31-238] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:32-242] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:33-245] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:34-249] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:35-252] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:36-256] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:37-261] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:38-265] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:39-267] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:40-269] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:41-273] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:42-277] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:43-281] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:44-283] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:45-287] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:46-290] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:47-295] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:48-300] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:49-303] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:50-306] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:51-309] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:52-314] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:53-316] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:54-321] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:55-324] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:56-328] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:57-331] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:58-335] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:57:59-339] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:00-343] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:01-347] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:02-350] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:03-355] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:04-360] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:05-365] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:06-370] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:07-373] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:08-377] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:09-380] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:10-382] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:11-386] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:12-390] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:13-393] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:14-398] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:15-402] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:16-406] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:17-409] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:18-413] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:19-416] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:20-420] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:21-423] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:22-428] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:23-432] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190224-07:58:24-435] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect

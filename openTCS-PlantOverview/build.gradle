@@ -18,7 +18,8 @@ dependencies {
   compileOnly group: 'org.opentcs.thirdparty.dockingframes', name: 'docking-frames-common', version: '1.1.2p11', classifier: 'sources'
   compile group: 'org.opentcs.thirdparty.dockingframes', name: 'docking-frames-core', version: '1.1.2p11'
   compileOnly group: 'org.opentcs.thirdparty.dockingframes', name: 'docking-frames-core', version: '1.1.2p11', classifier: 'sources'
-  
+  compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.1.Final'
+  compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
   compile group: 'org.cfg4j', name: 'cfg4j-core', version: '4.4.0'
   compileOnly group: 'org.cfg4j', name: 'cfg4j-core', version: '4.4.0', classifier: 'sources'
   

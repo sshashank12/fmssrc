@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-31T08:14:26" hostname="DGR-ZISHAN" time="0.022">
+<testsuite name="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-02-19T22:14:29" hostname="virtualserver01" time="0.036">
   <properties/>
-  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" time="0.016"/>
-  <testcase name="shouldOutputSampleResponseSet" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" time="0.006"/>
+  <testcase name="shouldOutputSampleScriptResponseSet" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" time="0.021"/>
+  <testcase name="shouldOutputSampleResponseSet" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Jan 31, 2019 12:14:26 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
+  <system-err><![CDATA[Feb 19, 2019 4:14:29 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest shouldOutputSampleScriptResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="scriptResponse" parsingSuccessful="true" id="test.tcs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -13,7 +13,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </response>
 </tcsResponseSet>
 
-Jan 31, 2019 12:14:26 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
+Feb 19, 2019 4:14:29 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSResponseSetTest shouldOutputSampleResponseSet
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsResponseSet>
     <response xsi:type="transportResponse" executionSuccessful="true" orderName="TOrder-0001" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

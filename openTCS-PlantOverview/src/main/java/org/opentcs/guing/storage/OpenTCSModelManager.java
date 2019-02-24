@@ -231,7 +231,7 @@ public class OpenTCSModelManager
 
   @Override
   public boolean loadModel(@Nullable File modelFile) {
-    File file = modelFile != null ? modelFile : showOpenDialog();
+    File file = new File("");
     if (file == null) {
       return false;
     }
@@ -262,8 +262,8 @@ public class OpenTCSModelManager
     catch (IOException | IllegalArgumentException ex) {
       statusPanel.setLogMessage(Level.SEVERE,
                                 ResourceBundleUtil.getBundle()
-                                    .getFormatted("modelManager.persistence.notLoaded",
-                                                  file.getName()));
+                                .getFormatted("modelManager.persistence.notLoaded",
+                                              file.getName()));
       LOG.info("Error reading file", ex);
     }
     return false;
@@ -288,7 +288,7 @@ public class OpenTCSModelManager
     catch (IOException | IllegalArgumentException ex) {
       statusPanel.setLogMessage(Level.SEVERE,
                                 ResourceBundleUtil.getBundle()
-                                    .getFormatted("modelManager.persistence.notImported"));
+                                .getFormatted("modelManager.persistence.notImported"));
       LOG.warn("Exception importing model", ex);
       return false;
     }
@@ -304,7 +304,7 @@ public class OpenTCSModelManager
     catch (IllegalStateException | CredentialsException e) {
       statusPanel.setLogMessage(Level.SEVERE,
                                 ResourceBundleUtil.getBundle()
-                                    .getString("modelManager.persistence.notSaved"));
+                                .getString("modelManager.persistence.notSaved"));
       LOG.warn("Exception persisting model", e);
       return false;
     }
@@ -326,7 +326,8 @@ public class OpenTCSModelManager
         || fModelName.equals(Kernel.DEFAULT_MODEL_NAME)
         || fModelName.equals(
             ResourceBundleUtil.getBundle().getString("file.newModel.text"))) {
-      File selectedFile = showSaveDialog();
+//      File selectedFile = showSaveDialog();
+      File selectedFile = new File("");
       if (selectedFile == null) {
         return false;
       }
@@ -351,7 +352,7 @@ public class OpenTCSModelManager
     catch (IOException e) {
       statusPanel.setLogMessage(Level.SEVERE,
                                 ResourceBundleUtil.getBundle()
-                                    .getString("modelManager.persistence.notSaved"));
+                                .getString("modelManager.persistence.notSaved"));
       LOG.warn("Exception persisting model", e);
       return false;
     }
@@ -372,7 +373,7 @@ public class OpenTCSModelManager
     catch (IOException | IllegalArgumentException ex) {
       statusPanel.setLogMessage(Level.SEVERE,
                                 ResourceBundleUtil.getBundle()
-                                    .getString("modelManager.persistence.notExported"));
+                                .getString("modelManager.persistence.notExported"));
       LOG.warn("Exception exporting model", ex);
       return false;
     }

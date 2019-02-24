@@ -8,6 +8,8 @@
 package org.opentcs.kernel.persistence;
 
 import com.google.common.base.Strings;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,6 +19,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
+import java.io.StringReader;
 import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -60,6 +63,8 @@ import org.opentcs.data.model.visualization.LayoutElement;
 import org.opentcs.data.model.visualization.ModelLayoutElement;
 import org.opentcs.data.model.visualization.ShapeLayoutElement;
 import org.opentcs.data.model.visualization.VisualLayout;
+import org.opentcs.guing.Dao.PlantModelTODao;
+import org.opentcs.kernel.DbModule;
 import org.opentcs.kernel.workingset.Model;
 import org.opentcs.util.Comparators;
 import org.opentcs.util.persistence.binding.AllowedOperationTO;
@@ -76,6 +81,7 @@ import org.opentcs.util.persistence.binding.StaticRouteTO;
 import org.opentcs.util.persistence.binding.StaticRouteTO.Hop;
 import org.opentcs.util.persistence.binding.VehicleTO;
 import org.opentcs.util.persistence.binding.VisualLayoutTO;
+import org.opentcs.util.persistence.models.XmlModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -145,7 +151,22 @@ public class XMLModel002Builder
 
     try (Reader reader = new BufferedReader(new InputStreamReader(inStream,
                                                                   Charset.forName("UTF-8")))) {
-      String modelName = PlantModelTO.fromXml(reader).getName();
+      
+      PlantModelTO plantModel;
+      final Injector injector2s = Guice.createInjector(new DbModule());
+    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+    
+      final XmlModel xmlModel = dao.getObject();
+    String test = xmlModel.getXmlData();
+    Reader inputString = new StringReader(test);
+    BufferedReader reader1 = new BufferedReader(inputString);
+
+    
+      
+      
+//      String modelName = PlantModelTO.fromXml(reader).getName();
+      
+      String modelName = PlantModelTO.fromXml(reader1).getName();
 
       if (modelName.isEmpty()) {
         modelName = "ModelNameMissing";
@@ -163,7 +184,20 @@ public class XMLModel002Builder
 
     try (Reader reader = new BufferedReader(new InputStreamReader(inStream,
                                                                   Charset.forName("UTF-8")))) {
-      PlantModelTO plantModel = PlantModelTO.fromXml(reader);
+      
+      PlantModelTO plantModel;
+      final Injector injector2s = Guice.createInjector(new DbModule());
+    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+    
+      final XmlModel xmlModel = dao.getObject();
+    String test = xmlModel.getXmlData();
+    Reader inputString = new StringReader(test);
+    BufferedReader reader1 = new BufferedReader(inputString);
+      
+      
+      
+//      PlantModelTO plantModel = PlantModelTO.fromXml(reader);
+    plantModel = PlantModelTO.fromXml(reader1);
 
       String modelVersion = plantModel.getVersion();
       if (!VERSION_STRING.equals(modelVersion)) {

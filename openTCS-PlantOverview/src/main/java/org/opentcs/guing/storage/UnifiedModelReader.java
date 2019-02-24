@@ -8,23 +8,26 @@
  */
 package org.opentcs.guing.storage;
 
+import static java.util.Objects.requireNonNull;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.nio.charset.Charset;
-import java.time.Instant;
 import java.util.HashSet;
 import java.util.Map;
-import static java.util.Objects.requireNonNull;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.swing.filechooser.FileFilter;
+
+import org.opentcs.guing.Dao.PlantModelTODao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.StatusPanel;
 import org.opentcs.guing.components.properties.type.KeyValueProperty;
 import org.opentcs.guing.components.properties.type.Property;
@@ -52,8 +55,14 @@ import org.opentcs.util.persistence.binding.PlantModelTO;
 import org.opentcs.util.persistence.binding.PointTO;
 import org.opentcs.util.persistence.binding.StaticRouteTO;
 import org.opentcs.util.persistence.binding.VehicleTO;
+import org.opentcs.util.persistence.models.XmlModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import java.io.Reader;
+import java.io.StringReader;
 
 /**
  * Implementation of <code>ModelReader</code> to deserialize a <code>SystemModel</code> from a xml
@@ -86,31 +95,47 @@ public class UnifiedModelReader
   private final Set<String> deserializationErrors = new HashSet<>();
 
   @Inject
-  public UnifiedModelReader(Provider<SystemModel> systemModelProvider, ModelValidator validator,
-                            StatusPanel statusPanel) {
+  public UnifiedModelReader(final Provider<SystemModel> systemModelProvider,
+                            final ModelValidator validator,
+                            final StatusPanel statusPanel) {
     this.systemModelProvider = requireNonNull(systemModelProvider, "systemModelProvider");
     this.validator = requireNonNull(validator, "validator");
     this.statusPanel = requireNonNull(statusPanel, "statusPanel");
   }
 
   @Override
-  public Optional<SystemModel> deserialize(File file)
+  public Optional<SystemModel> deserialize(final File file)
       throws IOException {
-    requireNonNull(file, "file");
+//    requireNonNull(file, "file");
 
     deserializationErrors.clear();
-    SystemModel systemModel = systemModelProvider.get();
-
-    String modelName = file.getName().replaceFirst("[.][^.]+$", ""); // remove extension
-    if (modelName != null && !modelName.isEmpty()) {
-      systemModel.setName(modelName);
-    }
-
+    final SystemModel systemModel = systemModelProvider.get();
+//
+//    final String modelName = file.getName().replaceFirst("[.][^.]+$", ""); // remove extension
+//    if (modelName != null && !modelName.isEmpty()) {
+//      systemModel.setName(modelName);
+//    }
+//
     PlantModelTO plantModel;
-    try (Reader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),
-                                                                  Charset.forName("UTF-8")))) {
-      plantModel = PlantModelTO.fromXml(reader);
-    }
+//    try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),
+//                                                                          Charset.forName("UTF-8")))) {
+
+    final Injector injector2s = Guice.createInjector(new DbModule());
+    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+    //			LOG.info("Init success {}", dao.getObject().getName());
+//      String line;
+//      final StringBuilder sb = new StringBuilder();
+//
+//      while ((line = reader.readLine()) != null) {
+//        sb.append(line.trim());
+//      }
+
+    final XmlModel xmlModel = dao.getObject();
+    String test = xmlModel.getXmlData();
+    Reader inputString = new StringReader(test);
+    BufferedReader reader1 = new BufferedReader(inputString);
+
+    plantModel = PlantModelTO.fromXml(reader1);
 
     plantModel.getProperties().stream()
         .forEach(
@@ -123,49 +148,49 @@ public class UnifiedModelReader
       LOG.warn("There is more than one visual layout. Using only the first one.");
     }
 
-    UnifiedModelComponentConverter modelConverter = new UnifiedModelComponentConverter();
-    for (PointTO point : plantModel.getPoints()) {
+    final UnifiedModelComponentConverter modelConverter = new UnifiedModelComponentConverter();
+    for (final PointTO point : plantModel.getPoints()) {
       validateAndAddModelComponent(
           modelConverter.convertPointTO(point, plantModel.getVisualLayouts().get(0)),
           systemModel);
     }
-    for (PathTO path : plantModel.getPaths()) {
+    for (final PathTO path : plantModel.getPaths()) {
       validateAndAddModelComponent(
           modelConverter.convertPathTO(path, plantModel.getVisualLayouts().get(0)),
           systemModel);
     }
-    for (VehicleTO vehicle : plantModel.getVehicles()) {
+    for (final VehicleTO vehicle : plantModel.getVehicles()) {
       validateAndAddModelComponent(
           modelConverter.convertVehicleTO(vehicle, plantModel.getVisualLayouts().get(0)),
           systemModel);
     }
-    for (LocationTypeTO locationType : plantModel.getLocationTypes()) {
+    for (final LocationTypeTO locationType : plantModel.getLocationTypes()) {
       validateAndAddModelComponent(modelConverter.convertLocationTypeTO(locationType),
                                    systemModel);
     }
-    for (LocationTO location : plantModel.getLocations()) {
+    for (final LocationTO location : plantModel.getLocations()) {
       validateAndAddModelComponent(
           modelConverter.convertLocationTO(location,
                                            plantModel.getLocations(),
                                            plantModel.getVisualLayouts().get(0)),
           systemModel);
 
-      for (LocationTO.Link link : location.getLinks()) {
+      for (final LocationTO.Link link : location.getLinks()) {
         validateAndAddModelComponent(modelConverter.convertLinkTO(link, location),
                                      systemModel);
       }
     }
-    for (BlockTO block : plantModel.getBlocks()) {
+    for (final BlockTO block : plantModel.getBlocks()) {
       validateAndAddModelComponent(
           modelConverter.convertBlockTO(block, plantModel.getVisualLayouts().get(0)),
           systemModel);
     }
-    for (StaticRouteTO staticRoute : plantModel.getStaticRoutes()) {
+    for (final StaticRouteTO staticRoute : plantModel.getStaticRoutes()) {
       validateAndAddModelComponent(
           modelConverter.convertStaticRouteTO(staticRoute, plantModel.getVisualLayouts().get(0)),
           systemModel);
     }
-    for (GroupTO group : plantModel.getGroups()) {
+    for (final GroupTO group : plantModel.getGroups()) {
       validateAndAddModelComponent(
           modelConverter.convertGroupTO(group),
           systemModel);
@@ -175,11 +200,11 @@ public class UnifiedModelReader
         modelConverter.convertVisualLayoutTO(plantModel.getVisualLayouts().get(0)),
         systemModel);
 
-    // XXX get OtherGrapgicalElements from ModelLayoutElementTOs, ShapeLayoutElementTOs and 
+    // XXX get OtherGrapgicalElements from ModelLayoutElementTOs, ShapeLayoutElementTOs and
     // ImageLayoutElementTOs
     // If any errors occurred, show the dialog with all errors listed
     if (!deserializationErrors.isEmpty()) {
-      ResourceBundleUtil bundle = ResourceBundleUtil.getBundle();
+      final ResourceBundleUtil bundle = ResourceBundleUtil.getBundle();
       JOptionPaneUtil
           .showDialogWithTextArea(statusPanel,
                                   bundle.getString("ValidationWarning.title"),
@@ -195,12 +220,13 @@ public class UnifiedModelReader
     return UnifiedModelConstants.DIALOG_FILE_FILTER;
   }
 
-  private void validateAndAddModelComponent(ModelComponent modelComponent, SystemModel systemModel) {
+  private void validateAndAddModelComponent(final ModelComponent modelComponent,
+                                            final SystemModel systemModel) {
     if (validator.isValidWith(systemModel, modelComponent)) {
       addModelComponentToSystemModel(modelComponent, systemModel);
     }
     else {
-      String deserializationError = ResourceBundleUtil.getBundle()
+      final String deserializationError = ResourceBundleUtil.getBundle()
           .getFormatted("UnifiedModelReader.deserialization.error",
                         modelComponent.getName(),
                         validator.getErrors());
@@ -210,7 +236,8 @@ public class UnifiedModelReader
     }
   }
 
-  private void addModelComponentToSystemModel(ModelComponent component, SystemModel model) {
+  private void addModelComponentToSystemModel(final ModelComponent component,
+                                              final SystemModel model) {
     if (component instanceof PointModel) {
       model.getMainFolder(SystemModel.FolderKey.POINTS).add(component);
     }
@@ -240,8 +267,8 @@ public class UnifiedModelReader
     }
     if (component instanceof LayoutModel) {
       // SystemModel already contains a LayoutModel, just copy the properties
-      ModelComponent layoutComponent = model.getMainFolder(SystemModel.FolderKey.LAYOUT);
-      for (Map.Entry<String, Property> property : component.getProperties().entrySet()) {
+      final ModelComponent layoutComponent = model.getMainFolder(SystemModel.FolderKey.LAYOUT);
+      for (final Map.Entry<String, Property> property : component.getProperties().entrySet()) {
         layoutComponent.setProperty(property.getKey(), property.getValue());
       }
     }

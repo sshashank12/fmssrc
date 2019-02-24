@@ -8,11 +8,14 @@
  */
 package org.opentcs.guing.storage;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.HashSet;
@@ -21,13 +24,18 @@ import java.util.Set;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.swing.filechooser.FileFilter;
+import org.opentcs.guing.Dao.PlantModelTODao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.StatusPanel;
 import org.opentcs.guing.model.ModelComponent;
 import org.opentcs.guing.model.SystemModel;
 import org.opentcs.guing.persistence.UnifiedModelComponentConverter;
 import org.opentcs.guing.util.JOptionPaneUtil;
 import org.opentcs.guing.util.ResourceBundleUtil;
+import org.opentcs.util.PlantModelConverter;
 import org.opentcs.util.persistence.binding.PlantModelTO;
+import org.opentcs.util.persistence.models.Model;
+import org.opentcs.util.persistence.models.XmlModel;
 
 /**
  * Synchronizes data kept in <code>ModelComponents</code> to a xml file.
@@ -107,7 +115,17 @@ public class UnifiedModelPersistor
 
     try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),
                                                                    Charset.forName("UTF-8")))) {
-      plantModel.toXml(writer);
+      
+      final Injector injector2s = Guice.createInjector(new DbModule());
+      final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+      XmlModel xmlModel = dao.getObject();
+      StringWriter sw = new StringWriter();
+      plantModel.toXml(sw);
+      String xmlString = sw.toString();
+      xmlModel.setXmlData(xmlString);
+      final Model modelTOSave = PlantModelConverter.convertPlantModelTOtoDbModel(plantModel);
+      dao.saveInNewTransaction(xmlModel);
+//      plantModel.toXml(writer);
     }
   }
 }

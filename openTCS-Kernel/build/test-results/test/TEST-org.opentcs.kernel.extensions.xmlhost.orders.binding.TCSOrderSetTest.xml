@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-01-31T08:14:26" hostname="DGR-ZISHAN" time="0.112">
+<testsuite name="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-02-19T22:14:29" hostname="virtualserver01" time="0.301">
   <properties/>
-  <testcase name="shouldMarshallAndUnmarshall" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.09"/>
-  <testcase name="shouldOutputSampleOrder" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.012"/>
-  <testcase name="shouldOutputSampleScriptOrder" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.01"/>
+  <testcase name="shouldMarshallAndUnmarshall" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.255"/>
+  <testcase name="shouldOutputSampleOrder" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.021"/>
+  <testcase name="shouldOutputSampleScriptOrder" classname="org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest" time="0.025"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Jan 31, 2019 12:14:26 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldMarshallAndUnmarshall
+  <system-err><![CDATA[Feb 19, 2019 4:14:29 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldMarshallAndUnmarshall
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
-    <order xsi:type="transport" deadline="2019-01-31T12:14:26.169+04:00" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2019-02-19T16:14:29.347-06:00" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Location 1" operation="Load">
             <property key="Key 1" value="Value 1"/>
             <property key="Key 2" value="Value 2"/>
@@ -18,7 +18,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
             <property key="Key 2" value="Value 2"/>
         </destination>
     </order>
-    <order xsi:type="transport" deadline="2019-01-31T12:14:26.170+04:00" intendedVehicle="Vehicle-02" id="TransportOrder-02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2019-02-19T16:14:29.349-06:00" intendedVehicle="Vehicle-02" id="TransportOrder-02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Location 3" operation="Load">
             <property key="Key 1" value="Value 1"/>
             <property key="Key 2" value="Value 2"/>
@@ -30,10 +30,10 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </order>
 </tcsOrderSet>
 
-Jan 31, 2019 12:14:26 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldOutputSampleOrder
+Feb 19, 2019 4:14:29 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldOutputSampleOrder
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
-    <order xsi:type="transport" deadline="2019-01-31T12:14:26.259+04:00" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <order xsi:type="transport" deadline="2019-02-19T16:14:29.601-06:00" intendedVehicle="Vehicle-01" id="TransportOrder-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <destination locationName="Storage 01" operation="Load cargo"/>
         <destination locationName="Storage 02" operation="Unoad cargo"/>
         <property key="waitBefore" value="Unload"/>
@@ -49,7 +49,7 @@ INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </order>
 </tcsOrderSet>
 
-Jan 31, 2019 12:14:26 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldOutputSampleScriptOrder
+Feb 19, 2019 4:14:29 PM org.opentcs.kernel.extensions.xmlhost.orders.binding.TCSOrderSetTest shouldOutputSampleScriptOrder
 INFO: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tcsOrderSet>
     <order xsi:type="transportScript" fileName="test.tcs" id="test.tcs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
